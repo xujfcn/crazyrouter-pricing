@@ -2,7 +2,7 @@
 
 > Compare AI model prices: Official vs Crazyrouter. Updated regularly.
 
-[Crazyrouter](https://crazyrouter.com?ref=github) — One API key, 300+ models, 45% cheaper.
+[Crazyrouter](https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community?ref=github) — One API key, 300+ models, 45% cheaper.
 
 ## 📊 Price Table (per 1M tokens, USD)
 
@@ -62,14 +62,14 @@ Based on typical usage patterns:
 ```bash
 # Just change the base URL and use your Crazyrouter key
 export OPENAI_API_KEY=sk-your-crazyrouter-key
-export OPENAI_BASE_URL=https://crazyrouter.com/v1
+export OPENAI_BASE_URL=https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1
 ```
 
 Works with: Claude Code, Cursor, Codex CLI, LangChain, Open WebUI, SillyTavern, and any OpenAI-compatible tool.
 
 ## 🔗 Links
-- 🌐 [Crazyrouter](https://crazyrouter.com?ref=github)
-- 📊 [Live Pricing](https://crazyrouter.com/pricing)
+- 🌐 [Crazyrouter](https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community?ref=github)
+- 📊 [Live Pricing](https://crazyrouter.com/pricing?utm_source=github&utm_medium=github&utm_campaign=dev_community)
 - 💬 [Telegram](https://t.me/crzrouter)
 
 ## 📄 License
