@@ -1,79 +1,30 @@
-# 💰 Crazyrouter Pricing Comparison
+# Crazyrouter API pricing reference
 
-> Compare AI model prices: Official vs Crazyrouter. Updated regularly.
+Snapshot: 2026-10-12, default account group, USD per million tokens. Source: [public pricing API](https://crazyrouter.com/api/pricing). Check the [current pricing page](https://crazyrouter.com/en/pricing) before purchasing.
 
-[Crazyrouter](https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community?ref=github) — One API key, 300+ models, 45% cheaper.
+| Model ID | Input / 1M | Output / 1M |
+|---|---:|---:|
+| `gpt-4o-mini` | $0.0975 | $0.39 |
+| `gpt-4o` | $1.625 | $6.5 |
+| `claude-sonnet-4-6` | $1.95 | $9.75 |
+| `claude-opus-4-6` | $3.25 | $16.25 |
+| `gemini-2.5-pro` | $0.6875 | $5.5 |
+| `gemini-2.5-flash` | $0.165 | $1.375 |
 
-## 📊 Price Table (per 1M tokens, USD)
+These are basic uncached input/output rates. Long-context tiers, cache creation/reads, tools, audio, images, video, taxes and account-specific groups can change the bill. There is no universal percentage discount across all models.
 
-### Top-Tier Models
+## Estimate a workload
 
-| Model | Official Input | Official Output | CR Input | CR Output | Save |
-|-------|---------------|----------------|----------|-----------|------|
-| Claude Opus 4 | $15.00 | $75.00 | $8.25 | $41.25 | **45%** |
-| GPT-4o | $2.50 | $10.00 | $1.38 | $5.50 | **45%** |
-| Gemini 2.5 Pro | $1.25 | $10.00 | $0.69 | $5.50 | **45%** |
-| Claude Sonnet 4 | $3.00 | $15.00 | $1.65 | $8.25 | **45%** |
+For a text-only workload at the displayed tier:
 
-### Mid-Tier Models
+`cost = input_tokens / 1_000_000 * input_rate + output_tokens / 1_000_000 * output_rate`
 
-| Model | Official Input | Official Output | CR Input | CR Output | Save |
-|-------|---------------|----------------|----------|-----------|------|
-| Claude Haiku 3.5 | $0.80 | $4.00 | $0.44 | $2.20 | **45%** |
-| GPT-4o-mini | $0.15 | $0.60 | $0.08 | $0.33 | **45%** |
-| Gemini 2.5 Flash | $0.15 | $0.60 | $0.08 | $0.33 | **45%** |
+For example, 1 million uncached input tokens and 200,000 output tokens on `gpt-4o` at this snapshot cost `$1.625 + 0.2 × $6.50 = $2.925`, before other billable items.
 
-### Reasoning Models
+## Comparing providers
 
-| Model | Official Input | Official Output | CR Input | CR Output | Save |
-|-------|---------------|----------------|----------|-----------|------|
-| o3-mini | $1.10 | $4.40 | $0.61 | $2.42 | **45%** |
-| DeepSeek R1 | $0.55 | $2.19 | $0.30 | $1.20 | **45%** |
+Compare the same exact model, context tier, cache policy, billing unit and region. Provider list prices, subscriptions, batch prices and gateway account rates are different products. Missing prices must not be treated as zero.
 
-### Open Source Models
+The earlier February 2026 comparison table, flat discounts, estimated task savings and free-credit promises have been retired. This page does not claim a universal cheapest provider or unverified sign-up bonus.
 
-| Model | Official Input | Official Output | CR Input | CR Output | Save |
-|-------|---------------|----------------|----------|-----------|------|
-| Llama 3.1 405B | $3.00 | $3.00 | $1.65 | $1.65 | **45%** |
-| Llama 3.1 70B | $0.59 | $0.79 | $0.32 | $0.43 | **45%** |
-| DeepSeek V3 | $0.27 | $1.10 | $0.15 | $0.61 | **45%** |
-| Mistral Large | $2.00 | $6.00 | $1.10 | $3.30 | **45%** |
-
-### Embedding Models
-
-| Model | Official Price | CR Price | Save |
-|-------|---------------|----------|------|
-| text-embedding-3-small | $0.02 | $0.011 | **45%** |
-| text-embedding-3-large | $0.13 | $0.072 | **45%** |
-
-## 💡 Monthly Cost Estimates
-
-Based on typical usage patterns:
-
-| Usage Level | Daily Tokens | Official (GPT-4o) | Crazyrouter | Monthly Savings |
-|-------------|-------------|-------------------|-------------|-----------------|
-| Light | 100K | ~$38 | ~$21 | **$17** |
-| Medium | 500K | ~$188 | ~$103 | **$85** |
-| Heavy | 2M | ~$750 | ~$413 | **$337** |
-| Enterprise | 10M | ~$3,750 | ~$2,063 | **$1,687** |
-
-## 🔧 How to Use
-
-```bash
-# Just change the base URL and use your Crazyrouter key
-export OPENAI_API_KEY=sk-your-crazyrouter-key
-export OPENAI_BASE_URL=https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1
-```
-
-Works with: Claude Code, Cursor, Codex CLI, LangChain, Open WebUI, SillyTavern, and any OpenAI-compatible tool.
-
-## 🔗 Links
-- 🌐 [Crazyrouter](https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community?ref=github)
-- 📊 [Live Pricing](https://crazyrouter.com/pricing?utm_source=github&utm_medium=github&utm_campaign=dev_community)
-- 💬 [Telegram](https://t.me/crzrouter)
-
-## 📄 License
-MIT
-
-*Prices last updated: February 2026. Check crazyrouter.com for current pricing.*
-
+[Cost calculator](https://xujfcn.github.io/crazyrouter-tools/github/pricing-calculator/) · [Model catalogue](https://crazyrouter.com/en/models) · [API documentation](https://docs.crazyrouter.com)
